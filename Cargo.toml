@@ -2,4 +2,5 @@
 
 members = [
     "day-1-calorie-counting",
+    "day-2-rock-paper-scissors",
 ]
