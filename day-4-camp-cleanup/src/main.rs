@@ -1,6 +1,6 @@
 use clap::Parser;
 use itertools::Itertools;
-use std::{io, ops::Range};
+use std::{io, ops::RangeInclusive};
 
 #[derive(Parser)]
 struct Args {
@@ -8,17 +8,17 @@ struct Args {
     overlap: bool,
 }
 
-trait Compare<Range> {
+trait Compare<RangeInclusive> {
     fn contains(&self, other: &Self) -> bool;
     fn overlaps(&self, other: &Self) -> bool;
 }
 
-impl<T: std::cmp::PartialOrd> Compare<Range<T>> for Range<T> {
+impl<T: std::cmp::PartialOrd> Compare<RangeInclusive<T>> for RangeInclusive<T> {
     fn contains(&self, other: &Self) -> bool {
-        self.start <= other.start && self.end >= other.end
+        self.start() <= other.start() && self.end() >= other.end()
     }
     fn overlaps(&self, other: &Self) -> bool {
-        self.start < other.end && self.end > other.start
+        self.start() <= other.end() && self.end() >= other.start()
     }
 }
 
@@ -35,10 +35,7 @@ fn main() {
                     .collect_tuple()
                     .unwrap()
             })
-            .map(|(start, end)| Range {
-                start,
-                end: end + 1,
-            })
+            .map(|(start, end)| RangeInclusive::new(start, end))
             .collect_tuple()
             .unwrap();
         if overlap && first.overlaps(&second)
