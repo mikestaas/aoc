@@ -8,4 +8,5 @@ members = [
     "day-5-supply-stacks",
     "day-6-tuning-trouble",
     "day-7-no-space-left-on-device",
+    "day-8-treetop-tree-house",
 ]
