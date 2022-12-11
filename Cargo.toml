@@ -10,4 +10,5 @@ members = [
     "day-7-no-space-left-on-device",
     "day-8-treetop-tree-house",
     "day-9-rope-bridge",
+    "day-10-cathode-ray-tube",
 ]
