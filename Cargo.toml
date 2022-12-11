@@ -11,4 +11,5 @@ members = [
     "day-8-treetop-tree-house",
     "day-9-rope-bridge",
     "day-10-cathode-ray-tube",
+    "day-11-monkey-in-the-middle",
 ]
