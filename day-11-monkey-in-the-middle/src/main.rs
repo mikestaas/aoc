@@ -35,7 +35,7 @@ enum Operand {
 struct Monkey {
     _id: u32,
     items: VecDeque<u64>,
-    inspections: u32,
+    inspections: u64,
     operation: Operation,
     operand: Operand,
     divisor: u64,
@@ -106,7 +106,7 @@ fn main() {
     let mut monkeys = monkey(&input).map(|(_, monkeys)| monkeys).unwrap();
     let mut next_items: HashMap<usize, VecDeque<u64>> = HashMap::new();
     let num_rounds = if worry_big { 10000 } else { 20 };
-    let _common_divisor: u64 = monkeys
+    let common_divisor: u64 = monkeys
         .iter()
         .map(|Monkey { divisor, .. }| *divisor)
         .product();
@@ -138,7 +138,11 @@ fn main() {
                     next_items
                         .entry(next)
                         .or_insert_with(VecDeque::new)
-                        .push_back(worry);
+                        .push_back(if worry_big {
+                            worry % common_divisor
+                        } else {
+                            worry
+                        });
                     *inspections += 1;
                 }
             }
@@ -150,11 +154,11 @@ fn main() {
         });
     });
 
-    let mut inspections: Vec<u32> = monkeys
+    let mut inspections: Vec<u64> = monkeys
         .iter()
         .map(|Monkey { inspections, .. }| *inspections)
         .collect();
     inspections.sort_unstable();
-    let result: u32 = inspections.iter().rev().take(2).product();
+    let result: u64 = inspections.iter().rev().take(2).product();
     println!("{}", result);
 }
