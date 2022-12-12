@@ -131,18 +131,16 @@ fn main() {
                         (Operation::Mul, Operand::Num(num)) => item * num,
                         (Operation::Mul, Operand::Old) => item * item,
                     };
-                    if !worry_big {
+                    if worry_big {
+                        worry %= common_divisor;
+                    } else {
                         worry /= 3;
                     }
                     let next = if worry % *divisor == 0 { *mt } else { *mf };
                     next_items
                         .entry(next)
                         .or_insert_with(VecDeque::new)
-                        .push_back(if worry_big {
-                            worry % common_divisor
-                        } else {
-                            worry
-                        });
+                        .push_back(worry);
                     *inspections += 1;
                 }
             }
