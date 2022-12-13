@@ -1,10 +1,13 @@
 use clap::Parser;
+use colored::Colorize;
 use std::{collections::HashMap, io};
 
 #[derive(Parser)]
 struct Args {
     #[arg(long, default_value_t = false)]
     any: bool,
+    #[arg(long, default_value_t = false)]
+    vis: bool,
 }
 
 #[derive(Eq, Hash, PartialEq, Clone, Copy, Debug)]
@@ -83,7 +86,7 @@ fn find_moves(
 }
 
 fn main() {
-    let Args { any } = Args::parse();
+    let Args { any, vis } = Args::parse();
     let mut input: Vec<Vec<char>> = io::stdin()
         .lines()
         .map(|line| line.unwrap().chars().collect())
@@ -113,11 +116,33 @@ fn main() {
         }
     }
 
-    let result: &u32 = potential_start
-        .iter()
-        .filter_map(|point| visited.get(point))
-        .min()
-        .unwrap();
+    if vis {
+        let colors: [(u8, u8, u8); 6] = [
+            (127, 0, 127),
+            (0, 0, 255),
+            (0, 255, 0),
+            (255, 255, 0),
+            (255, 127, 0),
+            (255, 0, 0),
+        ];
+        input.iter().enumerate().for_each(|(y, row)| {
+            row.iter().enumerate().for_each(|(x, c)| {
+                if let Some(distance) = visited.get(&Point { x, y }) {
+                    let (r, g, b) = colors[(distance % 6) as usize];
+                    print!("{}", c.to_string().truecolor(r, g, b));
+                } else {
+                    print!("{}", c);
+                }
+            });
+            println!();
+        });
+    } else {
+        let result: &u32 = potential_start
+            .iter()
+            .filter_map(|point| visited.get(point))
+            .min()
+            .unwrap();
 
-    println!("{}", result);
+        println!("{}", result);
+    }
 }
