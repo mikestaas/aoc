@@ -13,4 +13,5 @@ members = [
     "day-10-cathode-ray-tube",
     "day-11-monkey-in-the-middle",
     "day-12-hill-climbing-algorithm",
+    "day-13-distress-signal",
 ]

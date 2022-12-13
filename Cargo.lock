@@ -105,6 +105,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "day-13-distress-signal"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "nom",
+]
+
+[[package]]
 name = "day-2-rock-paper-scissors"
 version = "0.1.0"
 dependencies = [
