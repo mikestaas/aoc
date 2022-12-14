@@ -113,6 +113,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "day-14-regolith-reservoir"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "itertools",
+ "nom",
+]
+
+[[package]]
 name = "day-2-rock-paper-scissors"
 version = "0.1.0"
 dependencies = [
