@@ -15,4 +15,5 @@ members = [
     "day-12-hill-climbing-algorithm",
     "day-13-distress-signal",
     "day-14-regolith-reservoir",
+    "day-15-beacon-exclusion-zone",
 ]

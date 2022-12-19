@@ -122,6 +122,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "day-15-beacon-exclusion-zone"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "nom",
+]
+
+[[package]]
 name = "day-2-rock-paper-scissors"
 version = "0.1.0"
 dependencies = [
