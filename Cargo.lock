@@ -137,6 +137,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "day-20-grove-positioning-system"
+version = "0.1.0"
+dependencies = [
+ "clap",
+]
+
+[[package]]
 name = "day-3-rucksack-reorganization"
 version = "0.1.0"
 dependencies = [
