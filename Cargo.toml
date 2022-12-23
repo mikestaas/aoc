@@ -16,5 +16,6 @@ members = [
     "day-13-distress-signal",
     "day-14-regolith-reservoir",
     "day-15-beacon-exclusion-zone",
+    "day-18-boiling-boulders",
     "day-20-grove-positioning-system",
 ]

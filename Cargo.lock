@@ -130,6 +130,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "day-18-boiling-boulders"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "itertools",
+ "nom",
+]
+
+[[package]]
 name = "day-2-rock-paper-scissors"
 version = "0.1.0"
 dependencies = [
