@@ -18,4 +18,5 @@ members = [
     "day-15-beacon-exclusion-zone",
     "day-18-boiling-boulders",
     "day-20-grove-positioning-system",
+    "day-23-unstable-diffusion",
 ]

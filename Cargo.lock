@@ -153,6 +153,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "day-23-unstable-diffusion"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "itertools",
+]
+
+[[package]]
 name = "day-3-rucksack-reorganization"
 version = "0.1.0"
 dependencies = [
