@@ -161,6 +161,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "day-25-full-of-hot-air"
+version = "0.1.0"
+
+[[package]]
 name = "day-3-rucksack-reorganization"
 version = "0.1.0"
 dependencies = [

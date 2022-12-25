@@ -19,4 +19,5 @@ members = [
     "day-18-boiling-boulders",
     "day-20-grove-positioning-system",
     "day-23-unstable-diffusion",
+    "day-25-full-of-hot-air",
 ]
