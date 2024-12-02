@@ -81,6 +81,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "day-01-historian-hysteria"
+version = "0.1.0"
+
+[[package]]
 name = "day-02-rock-paper-scissors"
 version = "0.1.0"
 dependencies = [
