@@ -1,5 +1,5 @@
 [package]
-name = "day-4-camp-cleanup"
+name = "day-08-treetop-tree-house"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,4 +7,3 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "4.0.29", features = ["derive"] }
-itertools = "0.10.5"

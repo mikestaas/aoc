@@ -1,5 +1,5 @@
 [package]
-name = "day-9-rope-bridge"
+name = "day-02-rock-paper-scissors"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,5 +7,3 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "4.0.29", features = ["derive"] }
-lending-iterator = "0.1.6"
-nom = "7.1.1"
