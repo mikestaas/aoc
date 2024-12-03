@@ -21,4 +21,5 @@ members = [
     "2022/day-23-unstable-diffusion",
     "2022/day-25-full-of-hot-air",
     "2024/day-01-historian-hysteria",
+    "2024/day-02-red-nosed-reports",
 ]
