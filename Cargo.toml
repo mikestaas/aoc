@@ -23,4 +23,5 @@ members = [
     "2024/day-01-historian-hysteria",
     "2024/day-02-red-nosed-reports",
     "2024/day-03-mull-it-over",
+    "2024/day-04-ceres-search",
 ]

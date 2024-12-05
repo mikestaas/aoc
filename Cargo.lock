@@ -118,6 +118,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "day-04-ceres-search"
+version = "0.1.0"
+
+[[package]]
 name = "day-05-supply-stacks"
 version = "0.1.0"
 dependencies = [
