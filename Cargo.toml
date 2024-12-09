@@ -1,5 +1,5 @@
 [workspace]
-workspace.resolver = "2"
+resolver = "2"
 members = [
     "2022/day-01-calorie-counting",
     "2022/day-02-rock-paper-scissors",
@@ -24,4 +24,5 @@ members = [
     "2024/day-02-red-nosed-reports",
     "2024/day-03-mull-it-over",
     "2024/day-04-ceres-search",
+    "2024/day-05-print-queue",
 ]

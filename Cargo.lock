@@ -114,12 +114,19 @@ name = "day-04-camp-cleanup"
 version = "0.1.0"
 dependencies = [
  "clap",
- "itertools",
+ "itertools 0.10.5",
 ]
 
 [[package]]
 name = "day-04-ceres-search"
 version = "0.1.0"
+
+[[package]]
+name = "day-05-print-queue"
+version = "0.1.0"
+dependencies = [
+ "itertools 0.13.0",
+]
 
 [[package]]
 name = "day-05-supply-stacks"
@@ -197,7 +204,7 @@ name = "day-14-regolith-reservoir"
 version = "0.1.0"
 dependencies = [
  "clap",
- "itertools",
+ "itertools 0.10.5",
  "nom",
 ]
 
@@ -214,7 +221,7 @@ name = "day-18-boiling-boulders"
 version = "0.1.0"
 dependencies = [
  "clap",
- "itertools",
+ "itertools 0.10.5",
  "nom",
 ]
 
@@ -230,7 +237,7 @@ name = "day-23-unstable-diffusion"
 version = "0.1.0"
 dependencies = [
  "clap",
- "itertools",
+ "itertools 0.10.5",
 ]
 
 [[package]]
@@ -344,6 +351,15 @@ name = "itertools"
 version = "0.10.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b0fd2260e829bddf4cb6ea802289de2f86d6a7a690192fbe91b3f46e0f2c8473"
+dependencies = [
+ "either",
+]
+
+[[package]]
+name = "itertools"
+version = "0.13.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "413ee7dfc52ee1a4949ceeb7dbc8a33f2d6c088194d9f922fb8318faf1f01186"
 dependencies = [
  "either",
 ]
